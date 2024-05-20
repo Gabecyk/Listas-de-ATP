@@ -21,29 +21,28 @@ class Program
         Oper();
     }
 
-    public static int Oper() // Operação aonde ocorre as fuuncionalidade do código
+    public static void Oper() // Operação aonde ocorre as fuuncionalidade do código
     {
         int x;
-        bool resu = default;
         Console.WriteLine("Escreva um número inteiro:");
         x = int.Parse(Console.ReadLine());
 
-        // if caso seja positivo dará true, caso ser negativo dará false
-        if (x > 0)
+        bool resu = Verificar(x);
+
+        // if para dar o resultado de true e false
+        if (resu)
         {
-            resu = true;
-            Console.WriteLine(resu);
-        }
-        else if (x <= 0)
-        {
-            resu = false;
             Console.WriteLine(resu);
         }
         else
         {
-            Console.WriteLine("Escreva apenas números inteiros ou que não seja zero.");
+            Console.WriteLine(resu);
         }
-        return x;
+    }
+
+    public static bool Verificar(int x) // Caso seja false retornará false, o mesmo para true
+    {
+        return x > 0;
     }
 
     public static void menu() //Menu 
