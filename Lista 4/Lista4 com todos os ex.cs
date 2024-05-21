@@ -183,41 +183,592 @@ class Program
     // Funções vazias para os exercícios 3 a 10 (devem ser implementadas conforme necessário)
     static void Ex03()
     {
-        // Implemente a lógica do exercício 3 aqui
-    }
+        static void procedimentoDois() //Segundo procedimento
+        {
+            int res = 0;
+            Console.WriteLine("Digite quantos valores de 3 números serão feitos:"); //Quantos conjuntos de 3 valores serão feitos
+            res = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= res; i++) //for para parar apenas quando fazer todos os procedimentos determinados pelo o usuário
+            {
+
+                int p = 0;
+                int s = 0;
+                int t = 0;
+
+                Console.WriteLine("Escreva o 1º número:");
+                int a = int.Parse(Console.ReadLine());
+                Console.WriteLine("Escreva o 2º número:");
+                int b = int.Parse(Console.ReadLine());
+                Console.WriteLine("Escreva o 3º número:");
+                int c = int.Parse(Console.ReadLine());
+
+                if (a > b && a > c) //if organizar crescetemente os números
+                {
+                    p = a;
+                    if (b > c)
+                    {
+                        s = b;
+                        t = c;
+                    }
+                    else
+                    {
+                        s = c;
+                        t = b;
+                    }
+                }
+                else if (b > a && b > c)
+                {
+                    p = b;
+                    if (a > c)
+                    {
+                        s = a;
+                        t = c;
+                    }
+                    else
+                    {
+                        s = c;
+                        t = a;
+                    }
+                }
+                else if (c > a && c > b)
+                {
+                    p = c;
+                    if (a > b)
+                    {
+                        s = a;
+                        t = b;
+                    }
+                    else
+                    {
+                        s = b;
+                        t = a;
+                    }
+
+                }
+
+                Console.WriteLine("Ordem crescente dos números do " + i + "º conjunto: {0}, {1}, {2}", t, s, p);
+
+            }
+
+
+        }
+
+        static void procedimentoUm() //Primeiro procedimento
+        {
+            int a, b, c = 0;
+            int p = 0;
+            int s = 0;
+            int t = 0;
+
+            Console.WriteLine("Escreva o 1º número:");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Escreva o 2º número:");
+            b = int.Parse(Console.ReadLine());
+            Console.WriteLine("Escreva o 3º número:");
+            c = int.Parse(Console.ReadLine());
+
+            if (a > b && a > c) //if organizar crescetemente os números
+            {
+                p = a;
+                if (b > c)
+                {
+                    s = b;
+                    t = c;
+                }
+                else
+                {
+                    s = c;
+                    t = b;
+                }
+            }
+            else if (b > a && b > c)
+            {
+                p = b;
+                if (a > c)
+                {
+                    s = a;
+                    t = c;
+                }
+                else
+                {
+                    s = c;
+                    t = a;
+                }
+            }
+            else if (c > a && c > b)
+            {
+                p = c;
+                if (a > b)
+                {
+                    s = a;
+                    t = b;
+                }
+                else
+                {
+                    s = b;
+                    t = a;
+                }
+            }
+            Console.Clear();
+            Console.WriteLine("Ordem crescente dos números: {0}, {1}, {2}", t, s, p); //Resultado com os números crescentes
+        }
+
+        static void menu() //Aqui o usuário escolhe à qual procedimento fazer
+        {
+            int resp;
+
+            Console.WriteLine("Qual procedimento deseja fazer?");
+            Console.WriteLine("1 - Ordem crescente:");
+            Console.WriteLine("2 - Ordem crescente de inderteminados números:");
+        }
+
+         // Aqui é determinado pela a resposta do usuário no "menu", oque será feito
+        
+            int resp;
+            menu();
+            resp = int.Parse(Console.ReadLine());
+            if (resp == 1)
+            {
+                procedimentoUm();
+            }
+            else if (resp == 2)
+            {
+                procedimentoDois();
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Escreva o número 1 ou 2");
+                
+            }
+        }
+    
 
     static void Ex04()
     {
-        // Implemente a lógica do exercício 4 aqui
+        static void procedimentoDois() //Procedimento 2
+        {
+            Console.WriteLine("Quantos triângulos serão lidos?");
+            int num = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= num; i++)
+            { //Repete a operação dependendo de quantas vezes o usuário pedir
+                Console.WriteLine("Digite os valores do " + i + "º triângulo:");
+                verificacao();
+            }
+        }
+
+
+        static void procedimentoUm() //Procedimento 1
+        {
+            verificacao();
+        }
+
+        static void verificacao()
+        { //Verifica se um lado do triângulo não é maior que a soma de outros dois lados 
+
+            Console.WriteLine("Digite o valor do lado X");
+            int x = int.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o valor do lado Y");
+            int y = int.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o valor do lado Z");
+            int z = int.Parse(Console.ReadLine());
+
+            if (x > (y + z) || y > (x + z) || z > (x + y))
+            {
+                Console.WriteLine("Um comprimento não pode ser maior que a soma dos outros lados!");
+            }
+            else
+            {
+                tipoTriangulo(x, y, z);
+            }
+
+        }
+
+        static void tipoTriangulo(int x, int y, int z)
+        { //Determina o tipo do triângulo
+
+            if (x == y && x == z)
+            {
+                Console.WriteLine("Triângulo Equilátero");
+            }
+            else if (x == y || x == z || z == y)
+            {
+                Console.WriteLine("Triângulo Isóceles");
+            }
+            else
+            {
+                Console.WriteLine("Triângulo Escaleno");
+            }
+
+        }
+
+        static void menu() //Aqui o usuário escolhe à qual procedimento fazer
+        {
+
+            Console.WriteLine("Qual procedimento deseja fazer?");
+            Console.WriteLine("1 - Verificar qual trìângulo é:");
+            Console.WriteLine("2 - Verificar qual trìângulo é, de inderteminadas vezes:");
+        }
+
+       
+
+            menu();
+            int resp = int.Parse(Console.ReadLine());
+            if (resp == 1)
+            {
+                procedimentoUm();
+            }
+            else if (resp == 2)
+            {
+                procedimentoDois();
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Escreva o número 1 ou 2");
+               
+            }
+        
     }
 
     static void Ex05()
     {
-        // Implemente a lógica do exercício 5 aqui
+       
+            Console.Write("Digite o primeiro número: ");
+            int num1 = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite o segundo número: ");
+            int num2 = int.Parse(Console.ReadLine());
+
+            int mdc = CalcularMDC(num1, num2); //Pega os valores do parametro CalcularMDC
+            Console.WriteLine($"O MDC de {num1} e {num2} é {mdc}");//Resultado
+        
+
+        static int CalcularMDC(int a, int b)//Calcula o MDC
+        {
+            while (b != 0) //Vai para quando o b ser igual a zero concluindo a operação
+            {
+                int temp = b;
+                b = a % b;
+                a = temp;
+                Console.WriteLine(temp);
+                Console.WriteLine(a);
+                Console.WriteLine(b);
+            }
+            return a; //Retorna o valor de a
+        }
     }
 
     static void Ex06()
     {
-        // Implemente a lógica do exercício 6 aqui
+        static void procedimentoDois() //Procedimento 2
+        {
+            Console.WriteLine("Quantas vezes serão realizados o procedimento?");
+            int num = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= num; i++) //For para repetir a quantidade de vezes que pediu
+            {
+                Console.WriteLine("Procedimento " + i + ":");
+                Oper();
+            }
+
+        }
+
+         static void procedimentoUm() //Procedimento 1
+        {
+            Oper();
+        }
+
+         static void Oper() // Operação aonde ocorre as fuuncionalidade do código
+        {
+            int x;
+            Console.WriteLine("Escreva um número inteiro:");
+            x = int.Parse(Console.ReadLine());
+
+            bool resu = Verificar(x);
+
+            // if para dar o resultado de true e false
+            if (resu)
+            {
+                Console.WriteLine(resu);
+            }
+            else
+            {
+                Console.WriteLine(resu);
+            }
+        }
+
+         static bool Verificar(int x) // Caso seja false retornará false, o mesmo para true
+        {
+            return x > 0;
+        }
+
+         static void menu() //Menu 
+        {
+            Console.WriteLine("Escolha uma opção:");
+            Console.WriteLine("1 - Procedimento 1");
+            Console.WriteLine("2 - Procedimento 2");
+        }
+
+        
+            int res;
+            menu(); //Leva ao menu para escolher o procedimento
+            res = int.Parse(Console.ReadLine());//lê o que o usuário escolheu
+
+            // if para levar em cada procedimento
+            if (res == 1)
+            {
+                procedimentoUm();
+            }
+            else if (res == 2)
+            {
+                procedimentoDois();
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Digite entre os números 1 ou 2!");                
+            }
+        
     }
 
     static void Ex07()
     {
-        // Implemente a lógica do exercício 7 aqui
+        static void procedimentoDois() // Procedimento 2
+        {
+            Console.WriteLine("Quantas notas de alunos serão efetuadas?");
+            int n = int.Parse(Console.ReadLine());
+
+            int[] vet = new int[n]; //Usei vetores para armazenar cada nota
+
+            for (int i = 0; i < vet.Length; i++)// Repete até que bata o valor de comprimento do vetor
+            {
+                Console.WriteLine("Nota");
+                vet[i] = int.Parse(Console.ReadLine()); //Usando o "i" irá armazenar a cada repetição em lenght diferente do vetor
+                If(vet[i]);
+            }
+        }
+
+        static void procedimentoUm() //Procedimento 1
+        {
+            int num = 0;
+            Console.WriteLine("Digite a nota média final do aluno:");
+            num = int.Parse(Console.ReadLine());
+            If(num);
+        }
+
+        static void If(int x) //Aqui é feito o tratamento do conceito da nota
+        {
+            if (x <= 39)
+            {
+                Console.WriteLine("Conceito F");
+            }
+            else if (x >= 40 && x <= 59)
+            {
+                Console.WriteLine("Conceito E");
+            }
+            else if (x >= 60 && x <= 69)
+            {
+                Console.WriteLine("Conceito D");
+            }
+            else if (x >= 70 && x <= 79)
+            {
+                Console.WriteLine("Conceito C");
+            }
+            else if (x >= 80 && x <= 89)
+            {
+                Console.WriteLine("Conceito B");
+            }
+            else if (x >= 90)
+            {
+                Console.WriteLine("Conceito A");
+            }
+        }
+
+
+        static void menu() //Menu 
+        {
+            Console.WriteLine("Escolha uma opção:");
+            Console.WriteLine("1 - Ler a média de um aluno:");
+            Console.WriteLine("2 - Ler média de determinado alunos:");
+        }
+
+        
+            int res;
+            menu(); //Leva ao menu para escolher o procedimento
+            res = int.Parse(Console.ReadLine());//lê o que o usuário escolheu
+
+            // if para levar em cada procedimento
+            if (res == 1)
+            {
+                procedimentoUm();
+            }
+            else if (res == 2)
+            {
+                procedimentoDois();
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Digite entre os números 1 ou 2!");
+            }
+        
     }
 
     static void Ex08()
     {
-        // Implemente a lógica do exercício 8 aqui
+        static double CalcularS(int n) //Calcula a função
+        {
+            double sum = 0.0;
+
+            for (int i = 1; i <= n; i++)
+            {
+                double term = (Math.Pow(i, 2) + 1) / (i + 3);
+                sum += term;
+            }
+
+            return sum; //Retorna o valor da função
+        }
+
+        
+            Console.WriteLine("Digite um valor inteiro positivo:");
+            int num = int.Parse(Console.ReadLine()); //Lê o número digitado
+
+            if (num > 0) //if para não ser um número negativo
+            {
+                double resultado = CalcularS(num);
+                Console.WriteLine($"O valor de S para N = {num} é: {resultado}");
+                //Resultado
+            }
+            else
+            {
+                Console.WriteLine("Digite um número positivo!");
+            }
+        
     }
 
     static void Ex09()
     {
-        // Implemente a lógica do exercício 9 aqui
+        static void aluno(double a, int b) //Dados do aluno e sua média
+        {
+            Console.WriteLine("O aluno " + b + " teve a media de: " + a);
+        }
+
+        static void Results(double media) //Diz o resultado
+        {
+
+            if (media >= 6)
+            {
+                Console.WriteLine("Aprovado");
+            }
+            else
+            {
+                Console.WriteLine("Reprovado");
+            }
+        }
+
+        static double Media(int a, int b) // Faz a média
+        {
+            double media = (double)a / b;
+            return media;
+        }
+
+        static void Notas(int[] alunos, int n)
+        {
+
+            for (int i = 1; i <= alunos.Length; i++) // repetir até que bata o número de alunos
+            {
+                int s = 0;
+
+                Console.WriteLine("Digite quantas notas o aluno " + i + " Colocará:");
+                int not = int.Parse(Console.ReadLine());
+
+                for (int j = 1; j <= not; j++) // Repete até que todas as notas sejam colocadas
+                {
+                    Console.WriteLine("Digite a " + j + "º nota:");
+                    s += int.Parse(Console.ReadLine());    // soma todas as notas para a média            
+                }
+
+                double media = Media(s, not); //Faz a média
+
+                Results(media); //Faz a avaliação de aprovado ou reprovado
+
+                aluno(media, i); //Dá dados do aluno e sua média
+            }
+        }
+
+        
+            Console.WriteLine("Quantos alunos terão as notas inseridas?");
+            int n = int.Parse(Console.ReadLine());
+
+            int[] alunos = new int[n];// o vetor fica com o tamanho de alunos totais
+
+            Notas(alunos, n);
+        
     }
 
     static void Ex10()
     {
-        // Implemente a lógica do exercício 10 aqui
+        static void Category(int a, ref char b, ref bool c)
+        {
+            //If para saber qual categoria está o nadador
+
+            if (a >= 18)
+            {
+                b = 'A';
+            }
+            else if (a >= 16 && a <= 17)
+            {
+                b = 'B';
+            }
+            else if (a >= 14 && a <= 15)
+            {
+                b = 'C';
+            }
+            else if (a >= 11 && a <= 13)
+            {
+                b = 'D';
+            }
+            else if (a >= 8 && a <= 10)
+            {
+                b = 'E';
+            }
+            else if (a >= 5 && a <= 7)
+            {
+                b = 'F';
+            }
+            else
+            {
+                //Caso não tenha idade o suficiente o char será falso para impedir que imprima os "dados finais"
+                Console.WriteLine("Idade muito baixa!");
+                c = false;
+            }
+        }
+        static int Age()
+        {
+            Console.WriteLine("Digite a sua idade:");
+            int age = int.Parse(Console.ReadLine());
+            return age;
+        }
+        
+            int idade = Age();//Leva para a seção de idade
+
+            char categoria = default;
+
+            bool verification = true;
+
+            Category(idade, ref categoria, ref verification);//Leva para Category
+
+            if (verification) // Dados finais
+            {
+                Console.WriteLine("Está na categoria: " + categoria);
+                Console.WriteLine("O nadador tem " + idade + " anos e está na categoria: " + categoria);
+            }
+            else
+            {
+                Console.WriteLine("Tente novamente daqui alguns anos.");
+            }
+        
     }
 }
