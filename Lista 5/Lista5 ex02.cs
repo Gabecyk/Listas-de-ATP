@@ -1,4 +1,5 @@
-class Program
+using System;
+class ex02
 {
     static void Main(String[] args) // Menu
     {

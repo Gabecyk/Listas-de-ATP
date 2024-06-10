@@ -1,6 +1,5 @@
-using static System.Net.Mime.MediaTypeNames;
-
-class Program
+using System;
+class ex03
 {
     static void Main(String[] args) // Início
     {       

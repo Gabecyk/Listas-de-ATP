@@ -1,4 +1,5 @@
-class Program
+using System;
+class ex01
 {
     private static void Main(string[] args)
     {
