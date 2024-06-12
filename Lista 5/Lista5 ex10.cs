@@ -5,7 +5,7 @@ class ex10
     static void Main(string[] args)
     {
         int[,] m = new int[10, 10];
-        preechereExibir(m);
+         preechereExibir(m);
 
         troca2e8(m);
         troca4e10(m);
@@ -13,7 +13,7 @@ class ex10
         troca5e10(m);
     }
 
-    static void preechereExibir(int[,] m)
+    static void preechereExibir(int[,]m)
     {
         Random r = new Random();
         for (int i = 0; i < m.GetLength(0); i++)
@@ -28,90 +28,100 @@ class ex10
         Console.WriteLine();
     }
 
-    static void troca2e8(int[,] m)
+    static void troca2e8(int[,]m)
     {
         Console.WriteLine("Matriz A:");
-        int aux;
+        int[,] a = new int[10, 10];
         for (int j = 0; j < m.GetLength(1); j++)
         {
-            aux = m[1, j];
-            m[1, j] = m[7, j];
-            m[7, j] = aux;
+            a[1, j] = m[1, j];
+            a[7, j] = m[7, j];
+            m[1, j] = a[7, j];
+            m[7, j] = a[1, j];
         }
-        
-        for (int j = 0; j < m.GetLength(1); j++)
+        int count = 0;
+        foreach (int value in m)
         {
-            for (int k = 0; k < m.GetLength(1); k++)
+            Console.Write(value + "\t");
+            count++;
+            if (count == m.GetLength(0))
             {
-                Console.Write(m[j, k] + "\t");
+                Console.WriteLine(); count = 0;
             }
-            Console.WriteLine();
         }
     }
 
     static void troca4e10(int[,] m)
     {
         Console.WriteLine("Matriz B:");
-        int aux;
+        int[,] a = new int[10, 10];
         for (int j = 0; j < m.GetLength(1); j++)
         {
-            aux = m[j, 3];
-            m[j, 3] = m[j, 9];
-            m[j, 9] = aux;
+            a[j, 3] = m[j, 3];
+            a[j, 9] = m[j, 9];
+            m[j, 3] = a[j, 9];
+            m[j, 9] = a[j, 3];
         }
-        
-        for (int j = 0; j < m.GetLength(1); j++)
+        int count = 0;
+        foreach (int value in m)
         {
-            for (int k = 0; k < m.GetLength(1); k++)
+            Console.Write(value + "\t");
+            count++;
+            if (count == m.GetLength(0))
             {
-                Console.Write(m[j, k] + "\t");
+                Console.WriteLine(); count = 0;
             }
-            Console.WriteLine();
-        }
+        }      
     }
 
     static void trocaDpeDs(int[,] m)
     {
         Console.WriteLine("Matriz C:");
-        int aux;
+        int[,] a = new int[10, 10];
         int n = m.GetLength(0);
         for (int j = 0; j < m.GetLength(1); j++)
         {
             n--;
-            aux = m[j, j];
-            m[j, j] = m[j, n];
-            m[j, n] = aux;
+            a[j, j] = m[j, j];
+            a[j, n] = m[j, n];
+            m[j, j] = a[j, n];
+            m[j, n] = a[j, j];
         }
-        
-        for (int j = 0; j < m.GetLength(1); j++)
+        int count = 0;
+        foreach (int value in m)
         {
-            for (int k = 0; k < m.GetLength(1); k++)
+            Console.Write(value + "\t");
+            count++;
+            if (count == m.GetLength(0))
             {
-                Console.Write(m[j, k] + "\t");
+                Console.WriteLine(); count = 0;
             }
-            Console.WriteLine();
         }
     }
 
     static void troca5e10(int[,] m)
     {
         Console.WriteLine("Matriz D:");
-        int aux;
-        for (int j = 0; j < m.GetLength(0); j++)
-        {
-            aux = m[4, j];
-            m[4, j] = m[j, 9];
-            m[j, 9] = aux;
-        }
+        int[,] a = new int[10, 10];
         for (int j = 0; j < m.GetLength(1); j++)
         {
-            for  (int k = 0; k < m.GetLength(1); k++)
+            a[4, j] = m[4, j];
+            a[j, 9] = m[j, 9];
+            m[4, j] = a[j, 9];
+            m[j, 9] = a[4, j];
+        }
+        int count = 0;
+        foreach (int value in m)
+        {
+            Console.Write(value + "\t");
+            count++;
+            if (count == m.GetLength(0))
             {
-                Console.Write(m[j,k]+ "\t");
+                Console.WriteLine(); count = 0;
             }
-            Console.WriteLine();
         }
     }
+
 }
 
 
