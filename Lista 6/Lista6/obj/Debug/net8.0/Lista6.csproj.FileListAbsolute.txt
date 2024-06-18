@@ -1,0 +1,15 @@
+C:\Users\Gabriel Balduino\Documents\Listas-de-ATP\Lista 6\Lista6\obj\Debug\net8.0\Lista6.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gabriel Balduino\Documents\Listas-de-ATP\Lista 6\Lista6\obj\Debug\net8.0\Lista6.AssemblyInfoInputs.cache
+C:\Users\Gabriel Balduino\Documents\Listas-de-ATP\Lista 6\Lista6\obj\Debug\net8.0\Lista6.AssemblyInfo.cs
+C:\Users\Gabriel Balduino\Documents\Listas-de-ATP\Lista 6\Lista6\obj\Debug\net8.0\Lista6.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel Balduino\Documents\Listas-de-ATP\Lista 6\Lista6\obj\Debug\net8.0\Lista6.sourcelink.json
+C:\Users\Gabriel Balduino\Documents\Listas-de-ATP\Lista 6\Lista6\bin\Debug\net8.0\Lista6.exe
+C:\Users\Gabriel Balduino\Documents\Listas-de-ATP\Lista 6\Lista6\bin\Debug\net8.0\Lista6.deps.json
+C:\Users\Gabriel Balduino\Documents\Listas-de-ATP\Lista 6\Lista6\bin\Debug\net8.0\Lista6.runtimeconfig.json
+C:\Users\Gabriel Balduino\Documents\Listas-de-ATP\Lista 6\Lista6\bin\Debug\net8.0\Lista6.dll
+C:\Users\Gabriel Balduino\Documents\Listas-de-ATP\Lista 6\Lista6\bin\Debug\net8.0\Lista6.pdb
+C:\Users\Gabriel Balduino\Documents\Listas-de-ATP\Lista 6\Lista6\obj\Debug\net8.0\Lista6.dll
+C:\Users\Gabriel Balduino\Documents\Listas-de-ATP\Lista 6\Lista6\obj\Debug\net8.0\refint\Lista6.dll
+C:\Users\Gabriel Balduino\Documents\Listas-de-ATP\Lista 6\Lista6\obj\Debug\net8.0\Lista6.pdb
+C:\Users\Gabriel Balduino\Documents\Listas-de-ATP\Lista 6\Lista6\obj\Debug\net8.0\Lista6.genruntimeconfig.cache
+C:\Users\Gabriel Balduino\Documents\Listas-de-ATP\Lista 6\Lista6\obj\Debug\net8.0\ref\Lista6.dll
