@@ -13,6 +13,7 @@ class Program
             Console.WriteLine("2 - Para executar o exercicio 2.");
             Console.WriteLine("3 - Para executar o exercicio 3.");
             Console.WriteLine("4 - Para executar o exercicio 4.");
+            Console.WriteLine("5 - Para executar o exercicio 5.");
             int.TryParse(Console.ReadLine(), out opcao);
 
             switch (opcao)
@@ -33,12 +34,16 @@ class Program
                     ex04 Ex04 = new ex04();
                     Ex04.Run();
                     break;
+                case 5:
+                    ex05 Ex05 = new ex05();
+                    Ex05.Run();
+                    break;
                 default:
                     Console.WriteLine("Opção invalida");
                     break;
             }
             Console.WriteLine("Deseja executar outro exercício? (s/n)");
-            resp = Console.ReadLine();
+            resp = Console.ReadLine().ToLower();
         } while (resp.ToLower().Equals("s"));
         if (resp.Equals("n")){
             Console.Clear();
