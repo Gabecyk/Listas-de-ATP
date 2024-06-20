@@ -11,14 +11,14 @@ class ex05
 
         int n = Numeros(); //n recebe quantidade de linhas que serão preenchidas
                
-        StreamWriter sw = new StreamWriter("D:\\ex05.txt", false, Encoding.ASCII);//Abre arquivo
+        StreamWriter sw = new StreamWriter("ex05.txt", false, Encoding.ASCII);//Abre arquivo
 
         if(n > 0) //O programa continua caso n não for maior que 0
         {
             recebeLinhas(n, sw); //user escreve as linhas
             sw.Close(); //fecha arquivo
 
-            StreamReader sr = new StreamReader("D:\\ex05.txt");//abre arquivo para ler
+            StreamReader sr = new StreamReader("ex05.txt");//abre arquivo para ler
             
             int cont = ExibirArquivo(sr); //Aqui exibi as linhas e retorna junto a qtd de linhas
             sr.Close();//fecha arquivo
