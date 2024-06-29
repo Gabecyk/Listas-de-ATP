@@ -9,7 +9,7 @@ class ex10
         Console.Clear();
         Console.WriteLine("ex10");
 
-        StreamWriter sw = new StreamWriter("D://ex10.txt", false, Encoding.ASCII);//abre arquivo
+        StreamWriter sw = new StreamWriter("ex10.txt", false, Encoding.ASCII);//abre arquivo
 
         Console.WriteLine("Quantas linhas serão preenchidas?");
         int n = int.Parse(Console.ReadLine()); //Quantas linhas serão preenchidas
@@ -24,7 +24,7 @@ class ex10
         }
         sw.Close();//fecha arquivo
 
-        StreamReader sr = new StreamReader("D://ex10.txt");//abre arquivo para ler
+        StreamReader sr = new StreamReader("ex10.txt");//abre arquivo para ler
         double max = double.MinValue;
         double min = double.MaxValue;
         double media = 0;

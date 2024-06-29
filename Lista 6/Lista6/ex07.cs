@@ -12,11 +12,11 @@ class ex07
         int n = 0; 
         qtdLetra(ref n); //Leva para a função que retorna o qtd de letra será colocadas no arquivo
 
-        StreamWriter sw = new StreamWriter("D://ex07.txt", false, Encoding.ASCII); //abre arquivo para escrever
+        StreamWriter sw = new StreamWriter("ex07.txt", false, Encoding.ASCII); //abre arquivo para escrever
         Recebe(sw, n); //Parametro para receber as letras
         sw.Close(); // Fecha arquivo
 
-        StreamReader sr = new StreamReader("D://ex07.txt"); //Abre arquivo para ler
+        StreamReader sr = new StreamReader("ex07.txt"); //Abre arquivo para ler
         string letra = "";
         ler(sr, letra); //Parametro para ler e mostrar resultado
         sr.Close(); //Fecha arquivo

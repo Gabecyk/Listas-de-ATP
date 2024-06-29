@@ -12,7 +12,7 @@ class ex06
         Console.WriteLine("Digite um número: "); 
         int n = int.Parse(Console.ReadLine()); //N recebe o número
 
-        StreamWriter sw = new StreamWriter("C://ex06.txt", false, Encoding.ASCII);//Abre arquivo
+        StreamWriter sw = new StreamWriter("ex06.txt", false, Encoding.ASCII);//Abre arquivo
         sw.WriteLine($"O número {n} é divisivel por:");
 
         Console.WriteLine("Aqui estão os divisores de {0}:",n); //Escreve no arquivo criado

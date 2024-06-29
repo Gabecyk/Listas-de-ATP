@@ -39,7 +39,7 @@ class ex09
     static void inserirDados() //insere matricula e telefone no arquivo
     {
         int verif = 0;
-        StreamWriter sw = new StreamWriter("D://ex09.txt", true, Encoding.ASCII); //abre arquivo
+        StreamWriter sw = new StreamWriter("ex09.txt", true, Encoding.ASCII); //abre arquivo
         do
         {
             Console.WriteLine("Digite a matricula e o telefone na mesma linha sendo separados por uma virgula:");
@@ -60,7 +60,7 @@ class ex09
     static void lerDados() //Ler o arquivo com dados
     {
         Console.Clear();
-        StreamReader sr = new StreamReader("D://ex09.txt");//abre o arquivo para ler
+        StreamReader sr = new StreamReader("ex09.txt");//abre o arquivo para ler
         char[] separa = new char[] {','}; //separa a linha com ','
         string linha = "";
 

@@ -1,0 +1,4 @@
+Faturamento mensal ? de: 1000.
+Faturamento anual ? de: 12000.
+Valor de multa no m?s: 66,66666666666667
+Manuten??o anual ? de: 36
